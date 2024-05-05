@@ -1,0 +1,9 @@
+rootProject.name = 'modules'
+include 'domain'
+include 'application'
+include 'application:sync-application'
+findProject(':application:sync-application')?.name = 'sync-application'
+include 'application:inquire-application'
+findProject(':application:inquire-application')?.name = 'inquire-application'
+include 'internal'
+
