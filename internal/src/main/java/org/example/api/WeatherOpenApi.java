@@ -26,7 +26,6 @@ public class WeatherOpenApi {
     private static final String dataType = "JSON"; // 받는 결과값 JSON 고정
 
     public List<OpenApiResponseDto> useOpenApi(OpenApiRequestDto requestDto) {
-        // TODO 타임아웃 걸어주기
         RestTemplate restTemplate = new RestTemplate();
         ObjectMapper objectMapper = new ObjectMapper();
 
