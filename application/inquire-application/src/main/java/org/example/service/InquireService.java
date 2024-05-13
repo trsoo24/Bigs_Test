@@ -15,10 +15,9 @@ import static org.example.exception.ErrorCode.NO_CONTENT_IN_DB;
 @RequiredArgsConstructor
 public class InquireService {
     private final WeatherRepository weatherRepository;
-
-    public List<Weather> getWeatherForecast(WeatherForecastDto dto) {
+    public List<Weather> getWeatherForecast(String forecastDate, Integer nx, Integer ny) {
         List<Weather> weatherList = weatherRepository.findAllByForecastDateAndNxAndNy
-                (dto.getForecastDate(), dto.getNx(), dto.getNy());
+                (forecastDate, nx, ny);
 
         if (weatherList.isEmpty()) {
             throw new CustomException(NO_CONTENT_IN_DB);
