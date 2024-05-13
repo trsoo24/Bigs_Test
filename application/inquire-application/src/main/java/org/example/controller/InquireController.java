@@ -1,10 +1,8 @@
 package org.example.controller;
 
-import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 import lombok.RequiredArgsConstructor;
-import org.example.dto.WeatherForecastDto;
 import org.example.entity.Weather;
 import org.example.service.InquireService;
 import org.springframework.http.ResponseEntity;
